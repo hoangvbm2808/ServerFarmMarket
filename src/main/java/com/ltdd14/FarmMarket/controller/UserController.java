@@ -1,5 +1,4 @@
 package com.ltdd14.FarmMarket.controller;
-
 import com.ltdd14.FarmMarket.model.user.User;
 import com.ltdd14.FarmMarket.model.user.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;

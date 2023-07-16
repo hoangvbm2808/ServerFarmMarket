@@ -6,15 +6,13 @@ import jakarta.persistence.*;
 
 
 @Entity
+@Table(name = "user")
 public class User{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private int id;
 
-    //    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    private int id;
     private String first_name;
     private String last_name;
     private String email;
