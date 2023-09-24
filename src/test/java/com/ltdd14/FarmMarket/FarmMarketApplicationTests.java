@@ -20,14 +20,14 @@ class FarmMarketApplicationTests {
 	@Autowired
 			private OrderDao orderDao;
 
-//	@Test
+	@Test
 	void addUserTest() {
 		User user = new User();
-		user.setFirst_name("Thanh");
-		user.setLast_name("Nguyen");
+		user.setFirst_name("Hoang");
+		user.setLast_name("Vo");
 		user.setUsername("minhhoang");
-		user.setPassword("123");
-		user.setEmail("thanh.2808@gmail.com");
+		user.setPassword("123456");
+		user.setEmail("mhoang8@gmail.com");
 		user.setPhone("039998202");
 		userDao.save(user);
 	}

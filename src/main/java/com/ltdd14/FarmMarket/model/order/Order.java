@@ -1,6 +1,6 @@
 package com.ltdd14.FarmMarket.model.order;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "order")

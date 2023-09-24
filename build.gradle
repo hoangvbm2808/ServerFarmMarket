@@ -18,27 +18,22 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
 	implementation group: 'com.mysql', name: 'mysql-connector-j', version: '8.0.33'
 //	implementation group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
 	// https://mvnrepository.com/artifact/org.eclipse.persistence/org.eclipse.persistence.jpa
 	implementation group: 'org.eclipse.persistence', name: 'org.eclipse.persistence.jpa', version: '4.0.2'
+	compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.22'
 
-	compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+	implementation group: 'io.jsonwebtoken', name: 'jjwt-api', version: '0.11.5'
+	runtimeOnly group: 'io.jsonwebtoken', name: 'jjwt-impl', version: '0.11.5'
+	runtimeOnly group: 'io.jsonwebtoken', name: 'jjwt-jackson', version: '0.11.5'
+	implementation group: 'com.google.code.gson', name: 'gson', version: '2.10.1'
+	implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
 
-	implementation group: 'com.nimbusds', name: 'nimbus-jose-jwt', version: '9.31'
-	implementation group: 'org.springframework.security', name: 'spring-security-web', version: '5.8.3'
-	implementation group: 'org.springframework.security', name: 'spring-security-config', version: '5.8.3'
-	compileOnly group: 'javax', name: 'javaee-web-api', version: '8.0.1'
-	implementation group: 'org.springframework.security', name: 'spring-security-taglibs', version: '5.8.3'
-	implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.12.2'
-	implementation group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.12.2'
-	implementation group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.12.2'
-	implementation group: 'org.codehaus.jackson', name: 'jackson-mapper-asl', version: '1.9.13'
-	implementation group: 'org.codehaus.jackson', name: 'jackson-core-asl', version: '1.9.13'
-	implementation group: 'javax.activation', name: 'activation', version: '1.1.1'
-	implementation group: 'org.springframework', name: 'spring-context-support', version: '5.3.24'
 }
 
 tasks.named('test') {
